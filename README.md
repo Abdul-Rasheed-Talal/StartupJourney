@@ -1,16 +1,25 @@
-# 🚀 My Startup Journey – Abdul Rasheed Talal
+# 🚀 Abdul Rasheed Talal – My Startup Journey
 
 **Age:** 17  
-**From:** Pakistan  
-**Started on:** July 7, 2025
+**Location:** Backward area of Pakistan  
+**Started:** 7 July 2025
 
-## 🎯 My Mission
+---
 
-To build a tech company that helps talented people in backward areas of Pakistan by providing IT jobs, real-world training, and opportunity.
+## 🎯 Mission
 
-I have no money. I have no connections. But I have a dream — and I will not stop.
+I want to build my own tech company to support the youth of backward areas in Pakistan.  
+Where there is talent but no support, I will create opportunity.  
+Even if I have to walk alone — I will.
 
-## 📘 Why I'm Doing This
+---
 
-Because too many people around me have skills but no platform.  
-Because I'm tired of waiting for change — I want to create it.
+## 💡 Why?
+
+Because:
+- I believe even without money, I can still build something great.
+- People around me are skilled but don’t get a chance.
+- No one is coming to help us — *so I will become the one who does.*
+
+---
+## 🔗 GitHub: [Abdul-Rasheed-Talal](https://github.com/Abdul-Rasheed-Talal)
