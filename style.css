@@ -62,3 +62,43 @@ img.github-pic {
   margin-left: 20px;
   margin-right: auto;
 }
+/* Layout styling */
+header {
+  background-color: #1e90ff;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 30px;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+footer a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
