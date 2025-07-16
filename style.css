@@ -94,6 +94,12 @@ nav li a {
 nav li a:hover {
   color: #ffd700; /* Add hover effect */
 }
+nav ul li a:hover {
+  background-color: #ffffff10;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
 
 /* Section styling */
 section {
