@@ -4,12 +4,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   padding: 30px;
   color: #333;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 h1 {
@@ -90,7 +95,14 @@ nav li a:hover {
   color: #ffd700; /* Add hover effect */
 }
 
-
+/* Section styling */
+section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
 
 main {
   padding: 30px;
