@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Tags for SEO -->
+<meta name="description" content="M. Abdul-Rasheed Talal's Portfolio – A passionate front-end developer building interactive and responsive websites." />
+<meta name="keywords" content="Abdul Rasheed Talal, Portfolio, Frontend Developer, HTML, CSS, JavaScript, Projects" />
+<meta name="author" content="M. Abdul-Rasheed Talal" />
+
+<!-- Open Graph for Social Sharing -->
+<meta property="og:title" content="M. Abdul-Rasheed Talal - Frontend Developer Portfolio" />
+<meta property="og:description" content="Explore my personal projects, skills, and web development journey." />
+<meta property="og:image" content="https://github.com/Abdul-Rasheed-Talal.png" />
+<meta property="og:url" content="https://abdul-rasheed-talal.github.io/StartupJourney/" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="style.css" />
-  <title>Abdul Rasheed Talal</title>
+  <title>Abdul Rasheed Talal | Web Developer Portfolio</title>
   <link rel="icon" href="logo.png" type="image/png" />
+  <!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- AOS Library CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header>
+    <button id="darkToggle" class="dark-mode-btn">
+  <span id="themeIcon">🌙</span>
+</button>
+
     <h1>My Startup Journey</h1>
     <nav>
       <ul>
@@ -22,12 +42,12 @@
   </header>
 
   <main>
-    <section id="home">
+    <section id="home" data-aos="fade-up">
       <h2>Welcome!</h2>
       <p>This is where my journey begins.</p>
     </section>
 
-    <section id="about">
+    <section id="about" data-aos="fade-right">
       <h2>About Me</h2>
       <p>👋 Hello, I'm <strong>Abdul Rasheed Talal</strong></p>
       <p>I'm 17 years old and on a mission to build my own tech company.</p>
@@ -42,7 +62,7 @@
       <p>To create job opportunities and tech training for youth in underprivileged areas.</p>
     </section>
 
-    <section id="skills">
+    <section id="Skills" data-aos="fade-left">
       <h2>💻 Skills</h2>
       <ul>
         <li>C++</li>
@@ -52,7 +72,7 @@
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
       <h2>🚀 My Projects</h2>
       <div class="project-grid">
         <div class="project-card">
@@ -66,22 +86,51 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h2>📫 Contact</h2>
-      <p>Email: <a href="mailto:mabdulrasheedtalal@gmail.com">mabdulrasheedtalal@gmail.com</a></p>
-     
-      <h2>Github:</h2>
-      <div class="profile-card">
-        <a href="https://github.com/Abdul-Rasheed-Talal" target="_blank" rel="noopener noreferrer">
-          <img src="https://github.com/Abdul-Rasheed-Talal.png" class="github-pic" alt="GitHub Profile Picture" />
-        </a>
-        <p><strong>@Abdul-Rasheed-Talal</strong></p>
-      </div>
-    </section>
+  <!-- Contact Section -->
+<section id="contact">
+  <h2>📫 Contact</h2>
+  <p>Email: <a href="mailto:mabdulrasheedtalal@gmail.com">mabdulrasheedtalal@gmail.com</a></p>
+
+  <div class="contact-wrapper">
+    <!-- GitHub Card -->
+    <div class="profile-card">
+      <h3>GitHub:</h3>
+      <a href="https://github.com/Abdul-Rasheed-Talal" target="_blank" rel="noopener noreferrer">
+        <img src="https://github.com/Abdul-Rasheed-Talal.png" class="github-pic" alt="GitHub Profile Picture" />
+      </a>
+      <p><strong>@Abdul-Rasheed-Talal</strong></p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" data-aos="fade-up">
+      <h3>For more info</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
   </main>
 
   <footer>
     <p>&copy; 2025 Abdul Rasheed Talal. All rights reserved.</p>
   </footer>
+  <!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Your custom JS file -->
+<script src="main.js"></script>
+</body>
+
+
 </body>
 </html>
