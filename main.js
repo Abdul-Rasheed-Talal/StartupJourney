@@ -51,6 +51,8 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
   msg.textContent = "Sending...";
   msg.style.color = "black";
   submitBtn.disabled = true;
+  submitBtn.innerHTML = "Sending... 🔄";
+
 
   try {
     // Convert FormData to URLSearchParams with proper casing
@@ -91,8 +93,103 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
     msg.style.color = "red";
   } finally {
     submitBtn.disabled = false;
+    submitBtn.innerHTML = "Send Message";
   }
 });
+// ========================
+// Back to Top Button
+// ========================
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+// ========================
+// Scroll Reveal Animation
+// ========================
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 150;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+// ========================
+// Typing Animation Effect
+// ========================
+const typedText = document.querySelector(".typed-text");
+const words = ["Developer", "Designer", "Creator", "Freelancer"];
+let wordIndex = 0;
+let charIndex = 0;
+let typingDelay = 100;
+let erasingDelay = 60;
+let newWordDelay = 1200;
+
+typedText.style.color = "green"; // Set the color of the typed text
+
+function type() {
+  if (charIndex < words[wordIndex].length) {
+    typedText.textContent += words[wordIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    setTimeout(erase, newWordDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typedText.textContent = words[wordIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    wordIndex++;
+    if (wordIndex >= words.length) wordIndex = 0;
+    setTimeout(type, typingDelay);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (words.length) setTimeout(type, newWordDelay + 250);
+});
+
+// ========================
+// Preloader Logic
+// ========================
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+// ========================
+// Mobile Nav Toggle
+// ========================
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
 
 
 
@@ -101,5 +198,5 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 // Future Features Placeholder
 // ========================
 
-// Example: Smooth scroll, toggle dark mode, etc.
+
 // Add your JS functionality here as needed.

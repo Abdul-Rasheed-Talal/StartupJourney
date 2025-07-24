@@ -7,6 +7,15 @@
 <meta name="description" content="M. Abdul-Rasheed Talal's Portfolio – A passionate front-end developer building interactive and responsive websites." />
 <meta name="keywords" content="Abdul Rasheed Talal, Portfolio, Frontend Developer, HTML, CSS, JavaScript, Projects" />
 <meta name="author" content="M. Abdul-Rasheed Talal" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2T515JGLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y2T515JGLF');
+</script>
 
 <!-- Open Graph for Social Sharing -->
 <meta property="og:title" content="M. Abdul-Rasheed Talal - Frontend Developer Portfolio" />
@@ -22,32 +31,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- AOS Library CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papE8J...etc" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
   <header>
     <button id="darkToggle" class="dark-mode-btn">
   <span id="themeIcon">🌙</span>
 </button>
+<!-- Preloader -->
+<div id="preloader">
+  <div class="spinner"></div>
+</div>
 
     <h1>My Startup Journey</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <nav>
+    <button class="hamburger" id="hamburger">☰</button> <!-- Hamburger icon -->
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main>
-    <section id="home" data-aos="fade-up">
-      <h2>Welcome!</h2>
+  <!-- Home Section -->
+    <section id="home" data-aos="fade-up" class="reveal">
+      <h1>Welcome , I am a <span class="typed-text"></span><span class="cursor">|</span></h1>
       <p>This is where my journey begins.</p>
     </section>
 
-    <section id="about" data-aos="fade-right">
+    <section id="about" data-aos="fade-right" class="reveal">
       <h2>About Me</h2>
       <p>👋 Hello, I'm <strong>Abdul Rasheed Talal</strong></p>
       <p>I'm 17 years old and on a mission to build my own tech company.</p>
@@ -63,6 +82,7 @@
     </section>
 
     <section id="skills" data-aos="fade-left">
+      
       <h2>💻 Skills</h2>
       <ul>
         <li>C++</li>
@@ -72,7 +92,7 @@
       </ul>
     </section>
 
-    <section id="projects" data-aos="fade-up">
+    <section id="projects" class="reveal">
       <h2>🚀 My Projects</h2>
       <div class="project-grid">
         <div class="project-card">
@@ -87,7 +107,7 @@
     </section>
 
   <!-- Contact Section -->
-<section id="contact">
+<section id="contact" class="reveal">
   <h2>📫 Contact</h2>
   <p>Email: <a href="mailto:mabdulrasheedtalal@gmail.com">mabdulrasheedtalal@gmail.com</a></p>
 
@@ -120,11 +140,36 @@
 </section>
 
 
+
   </main>
 
-  <footer>
+  <button id="backToTopBtn" title="Back to top">↑</button>
+
+  <footer class="footer">
+    <div class="social-icons">
+    <a href="https://github.com/Abdul-Rasheed-Talal" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="mailto::mabdulrasheedtalal@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/m.abdul_rasheed_talal/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/m.abdulrasheed.talal/" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.youtube.com/@M.Abdul-RasheedTalal" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+  </div>
     <p>&copy; 2025 Abdul Rasheed Talal. All rights reserved.</p>
   </footer>
+
   <!-- AOS Library -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -133,5 +178,5 @@
 </body>
 
 
-</body>
+
 </html>
