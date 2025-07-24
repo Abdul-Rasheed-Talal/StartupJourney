@@ -292,9 +292,11 @@ body.dark-mode {
   /* Optional boost for visibility */
   filter: brightness(1.1) contrast(1.1);
 }
-body,
-.project,
-.profile-card {
-  transition: background-color 0.4s ease, color 0.4s ease;
+body{
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
   cursor: default;
+}
+#form-message {
+  transition: all 0.3s ease-in-out;
 }
