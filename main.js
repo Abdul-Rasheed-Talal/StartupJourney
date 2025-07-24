@@ -47,7 +47,7 @@ document.querySelector('.contact-form').addEventListener('submit', e => {
 
   const form = e.target;
   const submitBtn = form.querySelector("button[type='submit']");
-  const msg = document.getElementById('form-message'); // Make sure to add this in HTML
+  const msg = document.getElementById('form-message');
 
   msg.textContent = "Sending...";
   msg.style.color = "black";
@@ -55,9 +55,10 @@ document.querySelector('.contact-form').addEventListener('submit', e => {
 
   fetch(scriptURL, {
     method: 'POST',
+    mode: 'no-cors', // Important for Google Apps Script
     body: new FormData(form)
   })
-  .then(response => {
+  .then(() => {
     msg.textContent = "Message sent successfully!";
     msg.style.color = "green";
     form.reset();
