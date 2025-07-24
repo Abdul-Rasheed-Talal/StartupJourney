@@ -23,4 +23,4 @@ Because:
 
 ---
 ## 🔗 GitHub: [Abdul-Rasheed-Talal](https://github.com/Abdul-Rasheed-Talal)
-## 🔗 Portfolio: [Website/StartupJourney] (https://abdul-rasheed-talal.github.io/StartupJourney)
+## 🔗 Portfolio: [StartupJourney](https://abdul-rasheed-talal.github.io/StartupJourney)
