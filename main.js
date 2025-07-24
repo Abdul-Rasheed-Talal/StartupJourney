@@ -40,36 +40,58 @@ window.addEventListener("DOMContentLoaded", () => {
 // ========================
 // This example uses a Google Apps Script to handle form submissions.
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxwlrYVaoQ3aBDRxlgXulfjBrrD4H1Et_w7JpTyPDhQ6kgVay4HKj6E3xRlP6F0mvMe/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw2ONzCJj_ZwOtW9UeAyE8S-Q-ykkh3N-gjW95WDzaOjDNHo7PkGRV7x06yFa7z3ls/exec';
 
-document.querySelector('.contact-form').addEventListener('submit', e => {
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
   e.preventDefault();
-
   const form = e.target;
   const submitBtn = form.querySelector("button[type='submit']");
   const msg = document.getElementById('form-message');
-
+  
   msg.textContent = "Sending...";
   msg.style.color = "black";
   submitBtn.disabled = true;
 
-  fetch(scriptURL, {
-    method: 'POST',
-    mode: 'no-cors', // Important for Google Apps Script
-    body: new FormData(form)
-  })
-  .then(() => {
-    msg.textContent = "Message sent successfully!";
-    msg.style.color = "green";
-    form.reset();
-    submitBtn.disabled = false;
-  })
-  .catch(error => {
-    msg.textContent = "Error sending message. Please try again.";
+  try {
+    // Convert FormData to URLSearchParams with proper casing
+    const formData = new URLSearchParams();
+    formData.append('Name', form.name.value);
+    formData.append('Email', form.email.value);
+    formData.append('Message', form.message.value);
+
+    const response = await fetch(scriptURL, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    });
+
+    // First get the response as text
+    const responseText = await response.text();
+    
+    // Try to parse as JSON, fallback to text if it fails
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      throw new Error(`Server returned: ${responseText}`);
+    }
+
+    if (data.result === 'success') {
+      msg.textContent = "Message sent successfully!";
+      msg.style.color = "green";
+      form.reset();
+    } else {
+      throw new Error(data.error || 'Unknown server error');
+    }
+  } catch (error) {
+    console.error('Submission error:', error);
+    msg.textContent = `Error: ${error.message}`;
     msg.style.color = "red";
-    console.error('Error!', error.message);
+  } finally {
     submitBtn.disabled = false;
-  });
+  }
 });
 
 
